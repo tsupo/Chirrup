@@ -1,0 +1,1416 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\chirrup.rc2""  // Microsoft Visual C++ 以外のツールで編集されたリソース\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のコンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\chirrup.ico"
+IDI_TASKTRAY_ICON       ICON    DISCARDABLE     "res\\chirrup2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "chirrupのバージョン情報"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,21
+    LTEXT           "chirrup Version 1.19",IDC_VERSION,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2007, 2008, 2009   tsupo",IDC_STATIC,40,
+                    25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "blog: http://watcher.moe-nifty.com/",IDC_WEB_URL,45,37,
+                    105,8,SS_NOTIFY
+    LTEXT           "mailto: tsupo@na.rim.or.jp",IDC_MAIL_ADDR,44,47,73,8,
+                    SS_NOTIFY
+    LTEXT           "OpenSSL: ",IDC_OPENSSL,47,60,176,8
+    LTEXT           "iconv: ",IDC_ICONV,47,70,176,8
+    LTEXT           "libpng: ",IDC_LIBPNG,47,80,176,34
+    LTEXT           "zlib: ",IDC_ZLIB,47,115,176,8
+END
+
+IDD_CHIRRUP_DIALOG DIALOGEX 0, 0, 330, 383
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "chirrup Ver 1.xx"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_TIMELINE_TYPE,7,7,71,110,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         154,IDC_CAT,"Static",SS_BITMAP | SS_NOTIFY,85,7,16,19
+    LTEXT           "情報取得中……",IDC_EXECUTING,125,11,111,8,SS_NOTIFY
+    LTEXT           "更新周期",IDC_STATIC,248,11,28,8
+    EDITTEXT        IDC_PERIOD,279,7,32,15,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "分",IDC_STATIC,315,11,8,8
+    CONTROL         "",IDC_RICHEDIT_MESSAGES,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,7,27,316,187
+    PUSHBUTTON      "設定",IDC_SETTING_ACCOUNT,7,218,35,15
+    PUSHBUTTON      "キャプチャ",IDC_START_CAPTURE,44,218,35,15,NOT 
+                    WS_VISIBLE | WS_DISABLED
+    CONTROL         131,IDC_TWITTER,"Static",SS_BITMAP | SS_NOTIFY,84,219,9,
+                    11
+    CONTROL         157,IDC_JAIKU,"Static",SS_BITMAP | SS_NOTIFY,98,219,9,11
+    CONTROL         163,IDC_TIMELOG,"Static",SS_BITMAP | SS_NOTIFY,112,219,9,
+                    11
+    CONTROL         134,IDC_HATENAGROUP,"Static",SS_BITMAP | SS_NOTIFY,126,
+                    219,9,11
+    CONTROL         133,IDC_HATENABOOKMARK,"Static",SS_BITMAP | SS_NOTIFY,
+                    140,219,9,11
+    CONTROL         132,IDC_DELICIOUS,"Static",SS_BITMAP | SS_NOTIFY,154,219,
+                    7,9
+    CONTROL         135,IDC_GOOGLEGROUPS,"Static",SS_BITMAP | SS_NOTIFY,168,
+                    219,9,10
+    CONTROL         137,IDC_TWITTERWIKI,"Static",SS_BITMAP | SS_NOTIFY,182,
+                    219,9,11
+    CONTROL         138,IDC_TWITTER_CHIRRUP,"Static",SS_BITMAP | SS_NOTIFY,
+                    196,219,9,11
+    CONTROL         139,IDC_MIXI,"Static",SS_BITMAP | SS_NOTIFY,210,219,9,11
+    CONTROL         166,IDC_HATENASTAR,"Static",SS_BITMAP | SS_NOTIFY,224,
+                    219,9,11
+    CONTROL         170,IDC_FAVOTTER,"Static",SS_BITMAP | SS_NOTIFY,238,219,
+                    8,11
+    CONTROL         174,IDC_GYAZO,"Static",SS_BITMAP | SS_NOTIFY,252,219,20,
+                    20
+    CONTROL         175,IDC_HATENAFOTOLIFE,"Static",SS_BITMAP | SS_NOTIFY,
+                    266,219,6,10
+    CONTROL         187,IDC_HATENAHAIKU,"Static",SS_BITMAP | SS_NOTIFY,70,
+                    237,9,11
+    CONTROL         162,IDC_MOGO2,"Static",SS_BITMAP | SS_NOTIFY,84,237,9,11
+    CONTROL         161,IDC_WASSR,"Static",SS_BITMAP | SS_NOTIFY,98,237,9,11
+    CONTROL         165,IDC_HARUFM,"Static",SS_BITMAP | SS_NOTIFY,112,237,9,
+                    11
+    CONTROL         140,IDC_DIGG,"Static",SS_BITMAP | SS_NOTIFY,126,237,10,
+                    12
+    CONTROL         141,IDC_MAGNOLIA,"Static",SS_BITMAP | SS_NOTIFY,140,237,
+                    9,11
+    CONTROL         142,IDC_LIVEDOORCLIP,"Static",SS_BITMAP | SS_NOTIFY,154,
+                    237,9,11
+    CONTROL         146,IDC_LIVEDOOR,"Static",SS_BITMAP | SS_NOTIFY,168,237,
+                    9,11
+    CONTROL         145,IDC_GOOGLE,"Static",SS_BITMAP | SS_NOTIFY,182,237,9,
+                    11
+    CONTROL         143,IDC_YAHOO,"Static",SS_BITMAP | SS_NOTIFY,196,237,9,
+                    11
+    CONTROL         144,IDC_BLOGLINES,"Static",SS_BITMAP | SS_NOTIFY,210,237,
+                    9,11
+    CONTROL         150,IDC_TWITTER_SEARCH,"Static",SS_BITMAP | SS_NOTIFY,
+                    224,237,9,11
+    CONTROL         169,IDC_TUMBLR,"Static",SS_BITMAP | SS_NOTIFY,238,237,20,
+                    20
+    CONTROL         173,IDC_FLICKR,"Static",SS_BITMAP | SS_NOTIFY,252,237,8,
+                    11
+    CONTROL         176,IDC_TWITTERSNS,"Static",SS_BITMAP | SS_NOTIFY,266,
+                    237,9,11
+    PUSHBUTTON      "更新",IDC_UPDATE,285,218,38,15
+    PUSHBUTTON      "DM受信",IDC_RECV_DIRECTMESSAGE,285,236,38,15
+    LTEXT           "What are you doing?",IDC_STATIC_QUESTION,7,243,60,8,NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_MONOLOGUE,7,254,272,15,ES_AUTOHSCROLL | 
+                    ES_WANTRETURN
+    DEFPUSHBUTTON   "発言",IDC_POST_MONOLOGUE,285,254,38,15
+    CONTROL         "Webブラウザで閲覧中の URL を Twitter に送信する",
+                    IDC_CHECK_BROWSING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    7,275,167,10
+    CONTROL         "他のサービスにも同時投稿する",IDC_CHECK_MULTIPOST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,184,275,111,10
+    CONTROL         147,IDC_FRIEND001,"Static",SS_BITMAP | SS_NOTIFY,7,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND002,"Static",SS_BITMAP | SS_NOTIFY,39,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND003,"Static",SS_BITMAP | SS_NOTIFY,71,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND004,"Static",SS_BITMAP | SS_NOTIFY,103,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND005,"Static",SS_BITMAP | SS_NOTIFY,135,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND006,"Static",SS_BITMAP | SS_NOTIFY,167,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND007,"Static",SS_BITMAP | SS_NOTIFY,199,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND008,"Static",SS_BITMAP | SS_NOTIFY,231,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND009,"Static",SS_BITMAP | SS_NOTIFY,263,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND010,"Static",SS_BITMAP | SS_NOTIFY,295,291,
+                    27,32
+    CONTROL         147,IDC_FRIEND011,"Static",SS_BITMAP | SS_NOTIFY,7,329,
+                    27,32
+    CONTROL         147,IDC_FRIEND012,"Static",SS_BITMAP | SS_NOTIFY,39,329,
+                    27,32
+    CONTROL         147,IDC_FRIEND013,"Static",SS_BITMAP | SS_NOTIFY,71,329,
+                    27,32
+    CONTROL         147,IDC_FRIEND014,"Static",SS_BITMAP | SS_NOTIFY,103,329,
+                    27,32
+    CONTROL         147,IDC_FRIEND015,"Static",SS_BITMAP | SS_NOTIFY,135,329,
+                    27,32
+    CONTROL         147,IDC_FRIEND016,"Static",SS_BITMAP | SS_NOTIFY,167,329,
+                    27,32
+    CONTROL         147,IDC_FRIEND017,"Static",SS_BITMAP | SS_NOTIFY,199,329,
+                    27,32
+    CONTROL         147,IDC_FRIEND018,"Static",SS_BITMAP | SS_NOTIFY,231,329,
+                    27,32
+    CONTROL         147,IDC_FRIEND019,"Static",SS_BITMAP | SS_NOTIFY,263,329,
+                    27,32
+    CONTROL         147,IDC_FRIEND020,"Static",SS_BITMAP | SS_NOTIFY,295,329,
+                    27,32
+END
+
+IDD_PROCEEDING_DIALOG DIALOG DISCARDABLE  0, 0, 173, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "実行中……"
+FONT 10, "ＭＳ Ｐゴシック"
+BEGIN
+    PUSHBUTTON      "キャンセル",IDCANCEL,62,28,50,14,WS_DISABLED
+    LTEXT           "実行中……",IDC_STATIC_PROCEED_STRING,7,7,159,8
+END
+
+IDD_PROFILE_DIALOG DIALOG DISCARDABLE  0, 0, 211, 231
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "xxx さんのプロフィール"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         147,IDC_PROFILE_ICON,"Static",SS_BITMAP | SS_NOTIFY,7,23,
+                    30,32
+    LTEXT           "私はこんな人です",IDC_DESCRIPTION,42,7,162,51
+    CONTROL         151,IDC_STATIC,"Static",SS_BITMAP,28,67,176,49
+    CONTROL         "",IDC_EDIT_LAST_STATUS,"RICHEDIT",ES_MULTILINE | 
+                    ES_WANTRETURN | WS_BORDER | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP,41,77,156,36
+    LTEXT           "名前",IDC_STATIC,7,123,15,8
+    LTEXT           "firstName lastName",IDC_NAME,51,123,150,8
+    LTEXT           "スクリーン名",IDC_STATIC,7,143,38,8
+    LTEXT           "screen name",IDC_SCREENNAME,51,143,150,8
+    LTEXT           "居住地",IDC_STATIC,7,163,22,8
+    LTEXT           "somewhere",IDC_LOCATION,51,163,150,8
+    LTEXT           "Webページ",IDC_STATIC,7,183,32,8
+    LTEXT           "http://www.example.com/",IDC_FRIEND_URL,51,183,150,21,
+                    SS_NOTIFY
+    PUSHBUTTON      "friend にする",IDC_MANAGE_FRIEND,77,210,56,14
+    DEFPUSHBUTTON   "OK",IDOK,146,210,50,14
+END
+
+IDD_DIRECTMESSAGE_DIALOG DIALOG DISCARDABLE  0, 0, 241, 47
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "xxx さんにダイレクトメッセージを送信"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    DEFPUSHBUTTON   "送信",IDOK,184,7,50,14
+    PUSHBUTTON      "中止",IDCANCEL,184,25,50,14
+    CONTROL         147,IDC_PROFILE_ICON,"Static",SS_BITMAP | SS_NOTIFY,7,7,
+                    30,32
+    EDITTEXT        IDC_EDIT_DIRECTMESSAGE,42,7,139,32,ES_MULTILINE | 
+                    WS_VSCROLL
+END
+
+IDD_DIRECTMESSAGE_LIST_DIALOG DIALOG DISCARDABLE  0, 0, 195, 185
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ダイレクトメッセージ (全部で xx 件)"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "受信日時",IDC_STATIC,7,7,28,8
+    EDITTEXT        IDC_EDIT_DATETIME,7,17,181,12,ES_AUTOHSCROLL
+    LTEXT           "送信者",IDC_STATIC,7,34,22,8
+    EDITTEXT        IDC_EDIT_SENDER,7,44,181,12,ES_AUTOHSCROLL
+    LTEXT           "受信者",IDC_STATIC,7,61,22,8
+    EDITTEXT        IDC_EDIT_RECIPIENT,7,71,181,12,ES_AUTOHSCROLL
+    LTEXT           "内容",IDC_STATIC,7,91,15,8
+    CONTROL         "",IDC_EDIT_TEXT,"RICHEDIT",ES_MULTILINE | ES_WANTRETURN | 
+                    WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,7,101,
+                    181,55
+    PUSHBUTTON      "<< 戻る",IDC_BUTTON_PREV,13,160,28,18
+    PUSHBUTTON      "進む >>",IDC_BUTTON_NEXT,43,160,28,18
+    PUSHBUTTON      "返信",IDC_BUTTON_REPLY,78,160,40,18
+    PUSHBUTTON      "削除",IDC_BUTTON_DELETE,122,160,28,18
+    PUSHBUTTON      "終了",IDCANCEL,154,160,28,18
+END
+
+IDD_SETTING_DIALOG DIALOG DISCARDABLE  0, 0, 283, 371
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "アカウント情報設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB_SETTING,"SysTabControl32",0x0,7,7,269,340
+    DEFPUSHBUTTON   "OK",IDOK,76,350,38,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,121,350,38,14
+    PUSHBUTTON      "適用",IDC_BUTTON_ACCEPT,166,350,38,14
+END
+
+IDD_TAB_TWITTER DIALOG DISCARDABLE  0, 0, 268, 307
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "Twitter",IDC_STATIC,6,7,255,289
+    EDITTEXT        IDC_EDIT_USERNAME,198,28,22,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASSWORD,226,28,25,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    CONTROL         "同時投稿対象にする",IDC_CHECK_MULTIPOST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,46,76,10
+    GROUPBOX        "friends_timeline",IDC_STATIC,17,59,234,56
+    CONTROL         "閲覧対象にする",IDC_CHECK_FRIENDS_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,70,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,84,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,34,96,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_FRIENDS_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,83,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,207,96,32,14
+    GROUPBOX        "public_timeline",IDC_STATIC,17,118,234,56
+    CONTROL         "閲覧対象にする",IDC_CHECK_PUBLIC_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,129,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,143,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME2,34,155,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_PUBLIC_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,142,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC2,207,155,32,14
+    GROUPBOX        "user_timeline",IDC_STATIC,17,177,234,56
+    CONTROL         "閲覧対象にする",IDC_CHECK_USER_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,188,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,202,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME3,34,214,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_USER_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,201,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC3,205,216,32,14
+    GROUPBOX        "replies",IDC_STATIC,17,236,234,56
+    CONTROL         "閲覧対象にする",IDC_CHECK_REPLIES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,247,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,261,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME4,34,273,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",IDC_CHECK_REPLIES2,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,123,260,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC4,207,273,32,14
+    CONTROL         179,IDC_LOGO_TWITTER,"Static",SS_BITMAP,172,54,78,7
+    PUSHBUTTON      "認証方法設定",IDC_BUTTON_SET_AUTH,19,21,73,18
+    LTEXT           "[現在の設定: BASIC認証を使う]",IDC_CURRENT_AUTH,95,26,
+                    99,8
+END
+
+IDD_TAB_JAIKU DIALOG DISCARDABLE  0, 0, 268, 266
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "Jaiku",IDC_STATIC,6,7,255,247
+    CONTROL         "同時投稿対象にする",IDC_CHECK_MULTIPOST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,51,76,10
+    GROUPBOX        "friends_timeline",IDC_STATIC,17,64,234,59
+    CONTROL         "閲覧対象にする",IDC_CHECK_FRIENDS_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,75,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,90,43,8
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_FRIENDS_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,89,119,10
+    EDITTEXT        IDC_EDIT_LOGFILENAME,34,102,166,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,207,102,32,14
+    GROUPBOX        "public_timeline",IDC_STATIC,17,127,234,59
+    CONTROL         "閲覧対象にする",IDC_CHECK_PUBLIC_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,138,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,153,43,8
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_PUBLIC_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,152,119,10
+    EDITTEXT        IDC_EDIT_LOGFILENAME2,34,165,166,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC2,207,165,32,14
+    GROUPBOX        "user_timeline",IDC_STATIC,17,189,234,59
+    CONTROL         "閲覧対象にする",IDC_CHECK_USER_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,200,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,215,43,8
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_USER_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,214,119,10
+    EDITTEXT        IDC_EDIT_LOGFILENAME3,34,227,166,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC3,207,227,32,14
+    EDITTEXT        IDC_EDIT_USERNAME,198,28,22,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_PASSWORD,226,28,25,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    PUSHBUTTON      "認証方法設定",IDC_BUTTON_SET_AUTH,19,21,73,18
+    LTEXT           "[現在の設定: BASIC認証を使う]",IDC_CURRENT_AUTH,95,26,
+                    99,8
+END
+
+IDD_TAB_WASSR DIALOG DISCARDABLE  0, 0, 268, 292
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "Wassr",IDC_STATIC,6,7,255,269
+    LTEXT           "ログインID",IDC_STATIC,17,18,31,8
+    EDITTEXT        IDC_EDIT_USERNAME,34,31,93,14,ES_AUTOHSCROLL
+    LTEXT           "パスワード",IDC_STATIC,141,18,32,8
+    EDITTEXT        IDC_EDIT_PASSWORD,158,31,93,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "同時投稿対象にする",IDC_CHECK_MULTIPOST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,54,76,10
+    CONTROL         """Wassr"" に画像を投稿する",IDC_APPLIED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,96,54,92,10
+    PUSHBUTTON      "画像投稿関連設定",IDC_BUTTON_SETTING_UPLOAD,190,51,61,
+                    14
+    GROUPBOX        "friends_timeline",IDC_STATIC,17,71,234,63
+    CONTROL         "閲覧対象にする",IDC_CHECK_FRIENDS_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,84,62,10
+    CONTROL         "参加中のチャンネルも閲覧対象にする",IDC_CHECK_CHANNEL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,84,126,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,100,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,34,113,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_FRIENDS_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,100,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,207,113,32,14
+    GROUPBOX        "public_timeline",IDC_STATIC,17,139,234,63
+    CONTROL         "閲覧対象にする",IDC_CHECK_PUBLIC_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,152,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,168,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME2,34,181,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_PUBLIC_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,168,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC2,207,181,32,14
+    GROUPBOX        "user_timeline",IDC_STATIC,17,207,234,63
+    CONTROL         "閲覧対象にする",IDC_CHECK_USER_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,220,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,236,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME3,34,249,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_USER_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,236,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC3,207,249,32,14
+END
+
+IDD_TAB_MOGO2 DIALOG DISCARDABLE  0, 0, 268, 292
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "もごもご",IDC_STATIC,6,7,255,269
+    LTEXT           "メールアドレス",IDC_STATIC,17,18,43,8
+    EDITTEXT        IDC_EDIT_USERNAME,34,31,93,14,ES_AUTOHSCROLL
+    LTEXT           "APIパスワード",IDC_STATIC,141,18,42,8
+    EDITTEXT        IDC_EDIT_PASSWORD,158,31,93,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "同時投稿対象にする",IDC_CHECK_MULTIPOST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,51,76,10
+    GROUPBOX        "friends_timeline",IDC_STATIC,17,65,234,65
+    CONTROL         "閲覧対象にする",IDC_CHECK_FRIENDS_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,78,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,94,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,34,107,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_FRIENDS_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,94,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,207,107,32,14
+    GROUPBOX        "public_timeline",IDC_STATIC,17,134,234,65
+    CONTROL         "閲覧対象にする",IDC_CHECK_PUBLIC_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,147,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,163,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME2,34,176,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_PUBLIC_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,163,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC2,207,176,32,14
+    GROUPBOX        "user_timeline",IDC_STATIC,17,203,234,65
+    CONTROL         "閲覧対象にする",IDC_CHECK_USER_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,216,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,232,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME3,34,245,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_USER_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,232,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC3,207,245,32,14
+END
+
+IDD_TAB_TIMELOG DIALOG DISCARDABLE  0, 0, 268, 292
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "Timelog",IDC_STATIC,6,7,255,269
+    LTEXT           "ユーザ名",IDC_STATIC,17,18,28,8
+    EDITTEXT        IDC_EDIT_USERNAME,34,31,93,14,ES_AUTOHSCROLL
+    LTEXT           "パスワード",IDC_STATIC,141,18,32,8
+    EDITTEXT        IDC_EDIT_PASSWORD,158,31,93,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "同時投稿対象にする",IDC_CHECK_MULTIPOST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,51,76,10
+    GROUPBOX        "friends_timeline",IDC_STATIC,17,65,234,65
+    CONTROL         "閲覧対象にする",IDC_CHECK_FRIENDS_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,78,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,94,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,34,107,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_FRIENDS_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,94,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,207,107,32,14
+    GROUPBOX        "public_timeline",IDC_STATIC,17,134,234,65
+    CONTROL         "閲覧対象にする",IDC_CHECK_PUBLIC_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,147,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,163,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME2,34,176,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_PUBLIC_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,163,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC2,207,176,32,14
+    GROUPBOX        "user_timeline",IDC_STATIC,17,203,234,65
+    CONTROL         "閲覧対象にする",IDC_CHECK_USER_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,216,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,232,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME3,34,245,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_USER_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,232,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC3,207,245,32,14
+END
+
+IDD_TAB_HARUFM DIALOG DISCARDABLE  0, 0, 268, 292
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "haru.fm",IDC_STATIC,6,7,255,269
+    LTEXT           "haru.fm の ID または他サービスのID",IDC_STATIC,17,18,
+                    107,8
+    EDITTEXT        IDC_EDIT_USERNAME,34,31,93,14,ES_AUTOHSCROLL
+    LTEXT           "パスワード(haru.fm の ID 使用時) または API用パスワード(他サービスのID使用時)",
+                    IDC_STATIC,134,14,121,17
+    EDITTEXT        IDC_EDIT_PASSWORD,158,31,93,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "同時投稿対象にする",IDC_CHECK_MULTIPOST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,51,76,10
+    GROUPBOX        "友達との書き込みリスト (friends_timeline)",IDC_STATIC,
+                    17,65,234,65
+    CONTROL         "閲覧対象にする",IDC_CHECK_FRIENDS_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,78,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,94,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,34,107,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_FRIENDS_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,94,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,207,107,32,14
+    GROUPBOX        "ラウンジリスト (public_timeline)",IDC_STATIC,17,134,234,
+                    65
+    CONTROL         "閲覧対象にする",IDC_CHECK_PUBLIC_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,147,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,163,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME2,34,176,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_PUBLIC_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,163,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC2,207,176,32,14
+    GROUPBOX        "自分の書き込みリスト (user_timeline)",IDC_STATIC,17,203,
+                    234,65
+    CONTROL         "閲覧対象にする",IDC_CHECK_USER_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,216,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,232,43,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME3,34,245,166,14,ES_AUTOHSCROLL
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_USER_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,232,119,10
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC3,207,245,32,14
+END
+
+IDD_TAB_HATENA DIALOG DISCARDABLE  0, 0, 268, 298
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "はてな",IDC_STATIC,6,7,255,279
+    GROUPBOX        "アカウント",IDC_STATIC,15,19,238,48
+    LTEXT           "はてなID",IDC_STATIC,26,31,27,8
+    EDITTEXT        IDC_EDIT_USERNAME,35,45,93,14,ES_AUTOHSCROLL
+    LTEXT           "パスワード",IDC_STATIC,135,31,32,8
+    EDITTEXT        IDC_EDIT_PASSWORD,146,45,93,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "ついすた",IDC_STATIC,15,73,238,92
+    CONTROL         "「ついすた」を使う",IDC_USE_TWITSTAR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,85,66,10
+    LTEXT           "「ついすた」というのは、はてなスターの ☆ を Twitter にもつけて楽しもう、という一種のお遊びです。 Twitter  には  favorites 機能がありますが、 うまく使い分けてみてください。\r\n\r\n「ついすた」は はてなスターを利用していますので、 「ついすた」を楽しむには、はてなのユーザである必要があります(chirrup 版「ついすた」は、まだ OpenID認証によるはてなスターへのアクセスには対応していません)。",
+                    IDC_STATIC,32,101,214,56
+    GROUPBOX        "はてなフォトライフ",IDC_STATIC,15,172,238,107
+    CONTROL         "「はてなフォトライフ」に画像を投稿する",IDC_APPLIED,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,184,127,10
+    LTEXT           "chirrup のダイアログに画像ファイルをドラッグ&&ドロップすることで、「はてなフォトライフ」に画像ファイルをアップロードできるようになります。",
+                    IDC_STATIC,32,201,214,22
+    CONTROL         "アップロード先URL一覧をファイルに記録する",
+                    IDC_WRITE_LOGFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    26,230,146,10
+    LTEXT           "記録用ファイル名",IDC_STATIC,32,247,52,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,35,259,171,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,212,259,32,14
+END
+
+IDD_TAB_TUMBLR DIALOG DISCARDABLE  0, 0, 268, 281
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "Share on tumblr",IDC_STATIC,6,7,255,261
+    GROUPBOX        "tumblr",IDC_STATIC,15,19,238,89
+    LTEXT           "メールアドレス",IDC_STATIC,26,31,43,8
+    EDITTEXT        IDC_EDIT_USERNAME,35,47,93,14,ES_AUTOHSCROLL
+    LTEXT           "パスワード",IDC_STATIC,135,31,32,8
+    EDITTEXT        IDC_EDIT_PASSWORD,146,47,93,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    LTEXT           "投稿先 tumbleblog",IDC_STATIC,26,71,55,8
+    EDITTEXT        IDC_EDIT_BLOGNAME,35,87,162,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "変更",IDC_BUTTON_SELECT_TARGET,207,85,32,14
+    CONTROL         """tumblr"" を使う",IDC_USE_TUMBLR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,115,61,10
+    LTEXT           "閲覧中の timeline の中から、これは! と思う発言を tumblr に投稿したいときに使ってください。「発言」を右クリックすると、tumblrへ投稿するためのメニューが出るようになります。",
+                    IDC_STATIC,24,133,225,27
+    CONTROL         """tumblr"" に画像を投稿する",IDC_APPLIED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,169,95,10
+    LTEXT           "chirrup のダイアログに画像ファイルをドラッグ&&ドロップすることで、tumblr に画像ファイルをアップロードできるようになります。",
+                    IDC_STATIC,24,187,225,22
+    CONTROL         "アップロード先URL一覧をファイルに記録する",
+                    IDC_WRITE_LOGFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    18,215,146,10
+    LTEXT           "記録用ファイル名",IDC_STATIC,24,231,52,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,29,247,182,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,218,247,32,14
+END
+
+IDD_TUMBLR_DIALOG DIALOG DISCARDABLE  0, 0, 187, 261
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Share on Tumblr (Quote)"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "引用 (htmlタグ入力可能)",IDC_STATIC,7,7,73,8
+    EDITTEXT        IDC_EDIT_QUOTE,7,19,173,74,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "URL",IDC_STATIC,7,101,14,8
+    EDITTEXT        IDC_EDIT_URL,7,113,173,16,ES_AUTOHSCROLL
+    LTEXT           "題名",IDC_STATIC,7,137,15,8
+    EDITTEXT        IDC_EDIT_TITLE,7,149,173,16,ES_AUTOHSCROLL
+    LTEXT           "コメント (もしあれば)",IDC_STATIC,7,173,60,8
+    EDITTEXT        IDC_EDIT_COMMENT,7,185,173,47,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "投稿",IDOK,38,240,50,14
+    PUSHBUTTON      "中止",IDCANCEL,99,240,50,14
+END
+
+IDD_TAB_PROXY DIALOG DISCARDABLE  0, 0, 268, 222
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "プロクシ設定",IDC_STATIC,6,7,255,199
+    CONTROL         "プロクシ(proxy)を使う",IDC_USE_PROXY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,22,78,10
+    GROUPBOX        "proxyサーバに関する設定",IDC_STATIC,14,42,238,156
+    LTEXT           "proxyサーバの URL(または IPアドレス)",IDC_STATIC,25,54,
+                    114,8
+    EDITTEXT        IDC_EDIT_PROXY_SERVER_NAME,35,67,206,14,ES_AUTOHSCROLL
+    LTEXT           "proxyサーバのポート番号",IDC_STATIC,25,90,76,8
+    EDITTEXT        IDC_EDIT_PROXY_PORT_NUMBER,35,103,206,14,ES_AUTOHSCROLL
+    LTEXT           "proxyサーバのユーザ名 (必要な場合のみ)",IDC_STATIC,25,
+                    126,126,8
+    EDITTEXT        IDC_EDIT_PROXY_USER_NAME,35,139,206,14,ES_AUTOHSCROLL
+    LTEXT           "proxyサーバのパスワード (必要な場合のみ)",IDC_STATIC,25,
+                    162,130,8
+    EDITTEXT        IDC_EDIT_PROXY_PASSWORD,35,175,206,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+END
+
+IDD_UPLOAD_IMAGE_DIALOG DIALOG DISCARDABLE  0, 0, 299, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "画像のアップロード"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "説明 (はてなフォトライフの場合は「題名」になります)",
+                    IDC_STATIC,7,43,153,8
+    EDITTEXT        IDC_CAPTION,17,56,176,81,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN
+    LTEXT           "プレビュー",IDC_STATIC,197,43,31,8
+    CONTROL         172,IDC_BITMAP_THUMBNAIL,"Static",SS_BITMAP,207,56,27,32
+    CONTROL         174,IDC_GYAZO,"Static",SS_BITMAP | SS_NOTIFY,17,142,9,11
+    CONTROL         169,IDC_TUMBLR,"Static",SS_BITMAP | SS_NOTIFY,30,142,10,
+                    11
+    CONTROL         173,IDC_FLICKR,"Static",SS_BITMAP | SS_NOTIFY,43,142,9,
+                    11
+    CONTROL         175,IDC_HATENAFOTOLIFE,"Static",SS_BITMAP | SS_NOTIFY,56,
+                    142,9,11
+    CONTROL         161,IDC_WASSR,"Static",SS_BITMAP | SS_NOTIFY,69,142,9,11
+    DEFPUSHBUTTON   "OK",IDOK,98,144,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,152,144,50,14
+    LTEXT           "ファイル名",IDC_TARGET_NAME,7,7,31,8
+    EDITTEXT        IDC_IMAGE_FILENAME,17,20,267,15,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_TAB_GYAZO DIALOG DISCARDABLE  0, 0, 268, 133
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "Gyazo",IDC_STATIC,6,7,255,113
+    CONTROL         """Gyazo"" に画像を投稿する",IDC_APPLIED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,23,95,10
+    LTEXT           "chirrup のダイアログに画像ファイルをドラッグ&&ドロップすることで、Gyazo に画像ファイルをアップロードできるようになります。",
+                    IDC_STATIC,23,41,225,19
+    CONTROL         "アップロード先URL一覧をファイルに記録する",
+                    IDC_WRITE_LOGFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    17,68,146,10
+    LTEXT           "記録用ファイル名",IDC_STATIC,23,86,52,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,28,100,182,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,216,100,32,14
+END
+
+IDD_TAB_FLICKR DIALOG DISCARDABLE  0, 0, 268, 240
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "Flickr",IDC_STATIC,6,7,255,221
+    CONTROL         """Flickr"" に画像を投稿する",IDC_APPLIED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,23,94,10
+    LTEXT           "chirrup のダイアログに画像ファイルをドラッグ&&ドロップすることで、Flickr に画像ファイルをアップロードできるようになります。",
+                    IDC_STATIC,23,41,225,19
+    CONTROL         "アップロード先URL一覧をファイルに記録する",
+                    IDC_WRITE_LOGFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    17,68,146,10
+    LTEXT           "記録用ファイル名",IDC_STATIC,23,86,52,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,28,100,182,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,216,100,32,14
+    GROUPBOX        "認証",IDC_STATIC,12,122,243,102
+    PUSHBUTTON      "アクセストークンを取得",IDC_BUTTON_GET_TOKEN,22,135,78,
+                    15
+    LTEXT           "アクセストークン取得済み",IDC_TOKEN_STATUS,22,157,86,8
+    LTEXT           "Flickr では、ユーザ名、パスワードの代わりに、アクセストークンを使ってアクセスします。事前にアクセストークンを取得しておいてください。",
+                    IDC_STATIC,114,133,137,25
+    LTEXT           "なお、画像の投稿時にもアクセストークンの取得は可能です。",
+                    IDC_STATIC,114,165,132,18
+    LTEXT           "注意:\r\nproxyサーバ経由でインターネットにアクセスしている場合は、事前にproxyサーバ関連の設定をしておいてください。未設定のままだと、アクセストークンの取得ができません。",
+                    IDC_STATIC,22,186,229,33
+END
+
+IDD_SETTING_UPLOAD_WASSR DIALOG DISCARDABLE  0, 0, 269, 147
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Wassr への画像投稿の設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "Wassr",IDC_STATIC,6,7,255,113
+    CONTROL         """Wassr"" に画像を投稿する",IDC_APPLIED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,23,95,10
+    LTEXT           "chirrup のダイアログに画像ファイルをドラッグ&&ドロップすることで、Wassr に画像ファイルをアップロードできるようになります。",
+                    IDC_STATIC,23,41,225,19
+    CONTROL         "アップロード先URL一覧をファイルに記録する",
+                    IDC_WRITE_LOGFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    17,68,146,10
+    LTEXT           "記録用ファイル名",IDC_STATIC,23,86,52,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME_UPLOAD,28,100,182,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,216,100,32,14
+    DEFPUSHBUTTON   "OK",IDOK,95,126,38,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,137,126,38,14
+END
+
+IDD_CHANNEL_WASSR DIALOG DISCARDABLE  0, 0, 329, 199
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_VSCROLL | WS_SYSMENU
+CAPTION "参加中のチャンネル一覧"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "List3",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,7,305,183
+END
+
+IDD_TAB_HATENAHAIKU DIALOG DISCARDABLE  0, 0, 268, 306
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "はてなハイク",IDC_STATIC,6,7,255,287
+    LTEXT           "はてなID",IDC_STATIC,17,18,27,8
+    EDITTEXT        IDC_EDIT_USERNAME,21,29,93,14,ES_AUTOHSCROLL
+    LTEXT           "投稿用アドレス",IDC_STATIC,121,17,44,8
+    EDITTEXT        IDC_EDIT_PASSWORD,130,29,73,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    LTEXT           "@h.hatena.ne.jp",IDC_STATIC,206,32,44,8
+    GROUPBOX        "ヒント",IDC_STATIC,45,47,204,40
+    LTEXT           "投稿用アドレスを入手するには、はてなにログイン済みの状態の",
+                    IDC_STATIC,54,58,184,8
+    LTEXT           "Webブラウザで",IDC_STATIC,54,73,44,8
+    LTEXT           "「はてなハイク - Settings」",
+                    IDC_URL_HATENAHAIKU_SETTING,105,73,78,8,SS_NOTIFY
+    LTEXT           "にアクセスします。",IDC_STATIC,190,73,55,8
+    CONTROL         "同時投稿対象にする",IDC_CHECK_MULTIPOST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,91,76,10
+    GROUPBOX        "friends_timeline",IDC_STATIC,17,104,234,59
+    CONTROL         "閲覧対象にする",IDC_CHECK_FRIENDS_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,115,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,130,43,8
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_FRIENDS_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,129,119,10
+    EDITTEXT        IDC_EDIT_LOGFILENAME,34,142,166,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC,207,142,32,14
+    GROUPBOX        "public_timeline",IDC_STATIC,17,167,234,59
+    CONTROL         "閲覧対象にする",IDC_CHECK_PUBLIC_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,178,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,193,43,8
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_PUBLIC_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,192,119,10
+    EDITTEXT        IDC_EDIT_LOGFILENAME2,34,205,166,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC2,207,205,32,14
+    GROUPBOX        "user_timeline",IDC_STATIC,17,229,234,59
+    CONTROL         "閲覧対象にする",IDC_CHECK_USER_TIMELINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,27,240,62,10
+    LTEXT           "ログファイル名",IDC_STATIC,27,255,43,8
+    CONTROL         "ファイル名の末尾に日付を付加する",
+                    IDC_CHECK_USER_TIMELINE2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,254,119,10
+    EDITTEXT        IDC_EDIT_LOGFILENAME3,34,267,166,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照",IDC_BUTTON_FILESPEC3,207,267,32,14
+END
+
+IDD_TWITTER_AUTH_DIALOG DIALOG DISCARDABLE  0, 0, 306, 177
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Twitter の認証方法設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "OAuth 認証を使用する (パスワードを Chirrup で設定する必要はありません)",
+                    IDC_RADIO_OAUTH,"Button",BS_AUTORADIOBUTTON,7,7,236,10
+    PUSHBUTTON      "アクセストークンを取得",IDC_BUTTON_GET_TOKEN,23,27,98,
+                    15
+    LTEXT           "アクセストークン取得済み",IDC_TOKEN_STATUS,27,49,89,8
+    LTEXT           "OAuth 認証では、ユーザ名、パスワードの代わりに、アクセストークンを使って Twitter にアクセスします。事前にアクセストークンを取得しておく必要があります。",
+                    IDC_STATIC,130,23,160,28
+    LTEXT           "注意: proxyサーバ経由でインターネットにアクセスしている場合は、事前にproxyサーバ関連の設定をしておいてください。未設定のままだと、アクセストークンの取得ができません。",
+                    IDC_STATIC,29,65,259,19
+    CONTROL         "BASIC 認証を使用する (ユーザ名とパスワードを Chirrup で設定する必要があります)",
+                    IDC_RADIO_BASIC,"Button",BS_AUTORADIOBUTTON,7,101,263,10
+    LTEXT           "メールアドレス または ユーザID",IDC_STATIC,23,119,94,8
+    EDITTEXT        IDC_EDIT_USERNAME,40,131,93,14,ES_AUTOHSCROLL
+    LTEXT           "パスワード",IDC_STATIC,147,119,32,8
+    EDITTEXT        IDC_EDIT_PASSWORD,164,131,93,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,193,156,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,249,156,50,14
+END
+
+IDD_JAIKU_AUTH_DIALOG DIALOG DISCARDABLE  0, 0, 307, 255
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Jaiku の認証方法設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "ユーザ名 (スクリーン名)",IDC_STATIC,7,7,72,8
+    EDITTEXT        IDC_EDIT_USERNAME,24,19,93,14,ES_AUTOHSCROLL
+    CONTROL         "OAuth 認証を使用する (パスワードや personal_key を Chirrup で設定する必要はありません)",
+                    IDC_RADIO_OAUTH,"Button",BS_AUTORADIOBUTTON,7,44,285,10
+    PUSHBUTTON      "アクセストークンを取得",IDC_BUTTON_GET_TOKEN,23,64,98,
+                    15
+    LTEXT           "アクセストークン取得済み",IDC_TOKEN_STATUS,27,86,89,8
+    LTEXT           "OAuth 認証では、ユーザ名、パスワードの代わりに、アクセストークンを使って Jaiku にアクセスします。事前にアクセストークンを取得しておく必要があります。",
+                    IDC_STATIC,130,60,160,28
+    LTEXT           "注意: proxyサーバ経由でインターネットにアクセスしている場合は、事前にproxyサーバ関連の設定をしておいてください。未設定のままだと、アクセストークンの取得ができません。",
+                    IDC_STATIC,29,102,259,19
+    CONTROL         "従来の認証を使用する (ユーザ名と personal_key を Chirrup で設定する必要があります)",
+                    IDC_RADIO_BASIC,"Button",BS_AUTORADIOBUTTON,7,127,273,10
+    LTEXT           "personal_key",IDC_STATIC,27,143,38,8
+    EDITTEXT        IDC_EDIT_PASSWORD,44,155,93,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "ヒント",IDC_STATIC,34,177,247,52
+    LTEXT           "personal_key  を入手するには、 Jaiku  にログイン済みの状態のWebブラウザで",
+                    IDC_STATIC,45,187,230,8
+    LTEXT           "personal_key 入手用URI",IDC_URL_JAIKU_APIKEY,57,201,71,
+                    8,SS_NOTIFY
+    LTEXT           "にアクセスします。        (パスワードの代わりに personal_key を使います)",
+                    IDC_STATIC,45,215,221,8
+    DEFPUSHBUTTON   "OK",IDOK,193,234,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,250,234,50,14
+END
+
+IDD_BLOGID_DIALOG DIALOG DISCARDABLE  0, 0, 187, 139
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "blog ID 選択"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "記事を投稿する blog を選択してください。",IDC_STATIC,7,
+                    7,120,8
+    LISTBOX         IDC_LIST_BLOGID,7,19,173,91,LBS_NOINTEGRALHEIGHT | 
+                    LBS_WANTKEYBOARDINPUT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,78,118,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,130,118,50,14
+END
+
+IDD_INPUT_PIN DIALOG DISCARDABLE  0, 0, 201, 117
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Twitter への OAuth 経由でのアクセス許可手続き"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "ブラウザが起動したら、Chirrup が Twitter にアクセスする許可を与えてください。\r\n\r\n許可を与え終わったら、6桁 の数字が表示されますので、その数字を以下の入力欄に入力し、OK ボタンを押してください。",
+                    IDC_STATIC,7,7,187,41
+    EDITTEXT        IDC_EDIT_PIN,26,57,121,14,ES_AUTOHSCROLL
+    LTEXT           "許可を与えたくない場合は キャンセル ボタンを押してください。",
+                    IDC_STATIC,7,81,180,8
+    DEFPUSHBUTTON   "OK",IDOK,49,98,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,102,98,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,1,145
+ PRODUCTVERSION 1,0,1,145
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "a simple Twitter client for Windows\0"
+            VALUE "CompanyName", "Watching Balloon (KANSOKU-KIKYU) http://watcher.moe-nifty.com/\0"
+            VALUE "FileDescription", "chirrup - a client for Twitter, Jaiku, Wassr, Mogo2, Timelog, Haru.fm, and Hatena Haiku\0"
+            VALUE "FileVersion", "1, 0, 1, 145\0"
+            VALUE "InternalName", "chirrup\0"
+            VALUE "LegalCopyright", "Copyright (C) 2007, 2008, 2009 tsupo\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "chirrup.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "chirrup: written by H.Tsujimura (a.k.a. tsupo)\0"
+            VALUE "ProductVersion", "1, 0, 1, 145\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_CHIRRUP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 323
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_PROCEEDING_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_PROFILE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_DIRECTMESSAGE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_DIRECTMESSAGE_LIST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_SETTING_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 364
+    END
+
+    IDD_TAB_TWITTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 298
+    END
+
+    IDD_TAB_JAIKU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 257
+    END
+
+    IDD_TAB_WASSR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+    END
+
+    IDD_TAB_MOGO2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+    END
+
+    IDD_TAB_TIMELOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+    END
+
+    IDD_TAB_HARUFM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+    END
+
+    IDD_TAB_HATENA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 289
+    END
+
+    IDD_TAB_TUMBLR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_TUMBLR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 254
+    END
+
+    IDD_TAB_PROXY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_UPLOAD_IMAGE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_TAB_GYAZO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_TAB_FLICKR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_SETTING_UPLOAD_WASSR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_CHANNEL_WASSR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_TAB_HATENAHAIKU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 297
+    END
+
+    IDD_TWITTER_AUTH_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_JAIKU_AUTH_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 248
+    END
+
+    IDD_BLOGID_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+
+    IDD_INPUT_PIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND2               CURSOR  DISCARDABLE     "res\\cur00001.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DEFAULT_IMAGE       BITMAP  DISCARDABLE     "res\\default_profile_image_mini.bmp"
+IDB_TWITTER             BITMAP  DISCARDABLE     "res\\twitterFavicon.bmp"
+IDB_DELICIOUS           BITMAP  DISCARDABLE     "res\\delicious.bmp"
+IDB_HATENABOOKMARK      BITMAP  DISCARDABLE     "res\\hatenaBookmark.bmp"
+IDB_HATENAGROUP         BITMAP  DISCARDABLE     "res\\hatenaGroup.bmp"
+IDB_GOOGLEGROUPS        BITMAP  DISCARDABLE     "res\\googleGroups.bmp"
+IDB_TWITTERWIKI         BITMAP  DISCARDABLE     "res\\twitterFanWiki.bmp"
+IDB_TWITTER_CHIRRUP     BITMAP  DISCARDABLE     "res\\chirrup.bmp"
+IDB_MIXI                BITMAP  DISCARDABLE     "res\\icon_mixi001.bmp"
+IDB_DIGG                BITMAP  DISCARDABLE     "res\\digg.bmp"
+IDB_MAGNOLIA            BITMAP  DISCARDABLE     "res\\magnolia.bmp"
+IDB_LIVEDOORCLIP        BITMAP  DISCARDABLE     "res\\livedoorClip.bmp"
+IDB_YAHOO               BITMAP  DISCARDABLE     "res\\yahoo.bmp"
+IDB_BLOGLINES           BITMAP  DISCARDABLE     "res\\bloglines.bmp"
+IDB_GOOGLE              BITMAP  DISCARDABLE     "res\\google.bmp"
+IDB_LIVEDOOR            BITMAP  DISCARDABLE     "res\\livedoor.bmp"
+IDB_DEFAULT_IMAGE_NORMAL BITMAP  DISCARDABLE     "res\\default_profile_image_normal.bmp"
+IDB_TWITTER_SEARCH      BITMAP  DISCARDABLE     "res\\twitterSearch.bmp"
+IDB_BALLOON             BITMAP  DISCARDABLE     "res\\balloon.bmp"
+IDB_CAT                 BITMAP  DISCARDABLE     "res\\cat.bmp"
+IDB_JAIKU               BITMAP  DISCARDABLE     "res\\jaiku.bmp"
+IDB_WASSR               BITMAP  DISCARDABLE     "res\\wassr.bmp"
+IDB_MOGO2               BITMAP  DISCARDABLE     "res\\mogo2.bmp"
+IDB_TIMELOG             BITMAP  DISCARDABLE     "res\\timelog.bmp"
+IDB_HARUFM              BITMAP  DISCARDABLE     "res\\haruFm.bmp"
+IDB_HATENASTAR          BITMAP  DISCARDABLE     "res\\hatenaStar.bmp"
+IDB_TUMBLR              BITMAP  DISCARDABLE     "res\\tumblr.bmp"
+IDB_FAVOTTER            BITMAP  DISCARDABLE     "res\\favotter.bmp"
+IDB_BITMAP_THUMBNAIL    BITMAP  DISCARDABLE     "res\\thumb.bmp"
+IDB_FLICKR              BITMAP  DISCARDABLE     "res\\flickr.bmp"
+IDB_GYAZO               BITMAP  DISCARDABLE     "res\\gyazo.bmp"
+IDB_HATENAFOTOLIFE      BITMAP  DISCARDABLE     "res\\hatenaFotolife.bmp"
+IDB_TWITTERSNS          BITMAP  DISCARDABLE     "res\\twitterSNS.bmp"
+IDB_LOGO_TWITTER        BITMAP  DISCARDABLE     "res\\powered-by-twitter-sig.bmp"
+IDB_HATENAHAIKU         BITMAP  DISCARDABLE     "res\\hatenaHaiku.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CHIRRUP_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_TIMELINE_TYPE, 0x403, 8, 0
+0x7246, 0x6569, 0x646e, 0x0073, 
+    IDC_COMBO_TIMELINE_TYPE, 0x403, 7, 0
+0x7550, 0x6c62, 0x6369, "\000" 
+    IDC_COMBO_TIMELINE_TYPE, 0x403, 5, 0
+0x7355, 0x7265, "\000" 
+    IDC_COMBO_TIMELINE_TYPE, 0x403, 14, 0
+0x614a, 0x6b69, 0x3a75, 0x5020, 0x6275, 0x696c, 0x0063, 
+    IDC_COMBO_TIMELINE_TYPE, 0x403, 12, 0
+0x614a, 0x6b69, 0x3a75, 0x5520, 0x6573, 0x0072, 
+    IDC_COMBO_TIMELINE_TYPE, 0x403, 15, 0
+0x614a, 0x6b69, 0x3a75, 0x4620, 0x6972, 0x6e65, 0x7364, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "chirrup のバージョン情報(&A)..."
+    IDS_VERSION             "2.02"
+    IDS_ABOUT_SUPPORT       "サポート情報 (公式ブログ)"
+    IDS_ABOUT_SUPPORT2      "サポート情報 (Google Sites)"
+    IDS_ABOUT_COMMUNITY     "コミュニティ (Wassr)"
+    IDS_ABOUT_COMMUNITY2    "コミュニティ (wakoopa)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MAIL_ADDR           "mailto:tsupo@na.rim.or.jp"
+    IDS_WEB_URL             "http://watcher.moe-nifty.com/memo/2007/04/chirrup.html"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TXT_CONTINUE_PROCEEDING "実行中……"
+    IDS_URL_TWITTER         "http://twitter.com/"
+    IDS_URL_TWITTERWIKI     "http://twitter.pbwiki.com/"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_URL_HATENAGROUP     "http://twitter.g.hatena.ne.jp/"
+    IDS_URL_HATENABOOKMARK  "http://b.hatena.ne.jp/t/twitter"
+    IDS_URL_DELICIOUS       "http://del.icio.us/search/?fr=del_icio_us&p=twitter&type=all"
+    IDS_URL_GOOGLEGROUPS    "http://groups.google.com/group/twitter-development-talk"
+    IDS_URL_TWITTER_CHIRRUP "http://twitter.com/Chirrup"
+    IDS_URL_MIXI            "http://mixi.jp/view_community.pl?id=2015607"
+    IDS_URL_DIGG            "http://www.digg.com/search?section=news&s=twitter"
+    IDS_URL_MAGNOLIA        "http://ma.gnolia.com/tags/twitter"
+    IDS_URL_LIVEDOORCLIP    "http://clip.livedoor.com/tag/twitter"
+    IDS_URL_GOOGLE          "http://www.google.co.jp/search?q=twitter"
+    IDS_URL_BLOGLINES       "http://www.bloglines.com/search?q=twitter"
+    IDS_URL_YAHOO           "http://search.yahoo.co.jp/search?p=twitter"
+    IDS_URL_LIVEDOOR        "http://sf.livedoor.com/search/?q=twitter&sf=update_date"
+    IDS_URL_TWITTER_SEARCH  "http://twitter.1x1.jp/search/?lang=ja"
+    IDS_URL_JAIKU           "http://www.jaiku.com/"
+    IDS_URL_MOGO2           "http://mogo2.jp/"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_URL_WASSR           "http://wassr.jp/"
+    IDS_URL_TIMELOG         "http://timelog.jp/"
+    IDS_URL_HARUFM          "http://haru.fm/"
+    IDS_URL_HATENASTAR      "http://twitter.com.s.hatena.ne.jp/"
+    IDS_URL_JAIKU_APIKEY    "http://api.jaiku.com/key"
+    IDS_URL_MOGO2STAR       "http://mogo2.jp.s.hatena.ne.jp/"
+    IDS_URL_FAVOTTER        "http://favotter.matope.com/"
+    IDS_URL_TUMBLR          "http://www.tumblr.com/"
+    IDS_SIG_HEAD            "5)G'GIktn\\?CaO`yUXtg?Q3O)K'st@Xc5D{<0)&[wXdPH4{=mb&v8>0Iw_#))NSX^#}-E>"
+    IDS_SIG_TAIL            "P,p|4`6mC6'ROMmb"
+    IDS_URL_HATENAFOTOLIFE  "http://f.hatena.ne.jp/"
+    IDS_URL_FLICKR          "http://www.flickr.com/"
+    IDS_URL_GYAZO           "http://gyazo.com/"
+    IDS_URL_TWITTERSNS      "http://sns.twitterbu.com/"
+    IDS_URL_HATENAHAIKU_SETTING "http://h.hatena.ne.jp/settings"
+    IDS_URL_HATENAHAIKU     "http://h.hatena.ne.jp/"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CHIRRUP_SUPPORT     "http://sites.google.com/site/tsujimura543/chirrup"
+    IDS_CHIRRUP_COMMUNITY   "http://wassr.jp/channel/chirrup"
+    IDS_CHIRRUP_COMMUNITY2  "http://wakoopa.com/software/chirrup"
+    IDS_TWITTER_OA001       "H:8BGv?38_fFekuSpYvsrs:'cl.v<K?sGF]nvsxp[?XtEIDm@Nq_::U8Eg:CD_r&3S3A`u"
+    IDS_TWITTER_OA002       "'L0WLVg@Mr;M*@.~<vItX4`11t#PY}'EKpWMkW6=q"
+    IDS_JAIKU_OA001         "4n?+3?[;wgK33n""QIo'11dCddtnfcDZyi3+_""`<wwXdP3O*G%:vm@NqH:LQD}.[f0A1TXz"
+    IDS_JAIKU_OA002         "{xE2x014iK;<<NVB:|})CF7tW*L[Uw&{ow"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_URL_TWITTER_REQUEST_TOKEN "http://twitter.com/oauth/request_token"
+    IDS_URL_TWITTER_ACCESS_TOKEN "http://twitter.com/oauth/access_token"
+    IDS_URL_TWITTER_AUTHORIZE "http://twitter.com/oauth/authorize"
+    IDS_ACCESSTOKEN_ACQUIRED "[アクセストークン: 取得済み]"
+    IDS_ACCESSTOKEN_UNTAKEN "[アクセストークン: 未取得]"
+    IDS_URL_JAIKU_REQUEST_TOKEN "http://www.jaiku.com/api/request_token"
+    IDS_URL_JAIKU_ACCESS_TOKEN "http://www.jaiku.com/api/access_token"
+    IDS_URL_JAIKU_AUTHORIZE "http://www.jaiku.com/api/authorize"
+    IDS_DEFAULT_TARGET      "(プライマリ)"
+    IDS_TXT_INPUT_PIN       "6桁の数字を入力してください。   "
+    IDS_TTL_INPUT_PIN       "数字の入力"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (ｱﾒﾘｶ) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "About chirrup (&A)..."
+    IDS_ABOUT_SUPPORT       "Support (Official Blog)"
+    IDS_ABOUT_SUPPORT2      "Support (Google Sites)"
+    IDS_ABOUT_COMMUNITY     "Community (Wassr)"
+    IDS_ABOUT_COMMUNITY2    "Community (wakoopa)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TXT_CONTINUE_PROCEEDING "in processing ......"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ACCESSTOKEN_ACQUIRED "[Access Token: acquired]"
+    IDS_ACCESSTOKEN_UNTAKEN "[Access Token: untaken]"
+    IDS_DEFAULT_TARGET      "(primary)"
+    IDS_TXT_INPUT_PIN       "Input six digits as PIN for exchanging OAuth token   "
+    IDS_TTL_INPUT_PIN       "Input number"
+END
+
+#endif    // 英語 (ｱﾒﾘｶ) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\chirrup.rc2"  // Microsoft Visual C++ 以外のツールで編集されたリソース
+#include "l.jpn\afxres.rc"          // 標準のコンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

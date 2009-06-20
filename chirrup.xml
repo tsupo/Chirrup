@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<client>
+	<name>Chirrup</name>
+	<version>1.00</version>
+	<author>
+		<name>Hiroshi Tsujimura</name>
+		<email>tsujimura543@gmail.com</email>
+		<twitter>tsupo</twitter>
+	</author>
+	<url>http://watcher.moe-nifty.com/memo/2007/04/chirrup.html</url>
+	<twitter>Chirrup</twitter>
+	<description><![CDATA[
+		a simple Twitter client for Windows with posting messages written in Japanese.
+		<a href="http://twitter.com/Chirrup">Add me.</a>
+	]]>
+	</description>
+</client>

@@ -1,0 +1,30 @@
+﻿
+'Chirrup' is a microblog client on Windows.
+
+Target microblogs:
+    Twitter (over OAuth)
+    Jaiku (over OAuth)
+    Timelog
+    Wassr
+    Haru.Fm
+    mogo2 (mogo mogo)
+    Hatena Haiku
+
+Target photo sharing sites:
+    Flickr
+    tumblr
+    gyazo
+    Hatena Fotolife
+
+
+xmlRPC, libpng, and zlib libraries are necessary for building this application.
+
+  xmlRPC: 
+    http://github.com/tsupo/xmlRPC/tree
+
+  libpng
+    http://www.libpng.org/
+
+  zlib
+    http://www.zlib.org/
+
