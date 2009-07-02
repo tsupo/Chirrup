@@ -3,10 +3,17 @@
  *      Flickr 関連各種処理群
  *          written by H.Tsujimura  9 Jan 2008
  *
- *      Copyright (c) 2008 by H.Tsujimura (tsupo@na.rim.or.jp)
+ *      Copyright (c) 2008, 2009 by H.Tsujimura (tsupo@na.rim.or.jp)
  *      All Rights Reserved.
  *
  * $Log: /comm/chirrup/flickr.c $
+ * 
+ * 2     09/07/03 3:20 tsupo
+ * 2.03版
+ * 
+ * 7     09/07/01 15:14 Tsujimura543
+ * 投稿済み画像URLを「Flic.kr 形式の短縮URL」に変換するようにした
+ * (Flickr2Twitter 対応)
  * 
  * 1     09/05/14 3:50 tsupo
  * (1) ビルド環境のディレクトリ構造を整理
@@ -43,7 +50,7 @@
 
 #ifndef	lint
 static char	*rcs_id =
-"$Header: /comm/chirrup/flickr.c 1     09/05/14 3:50 tsupo $";
+"$Header: /comm/chirrup/flickr.c 2     09/07/03 3:20 tsupo $";
 #endif
 
 #ifdef  _MSC_VER
@@ -63,6 +70,45 @@ ToLower( char *p )
     }
 
     return ( p );
+}
+
+/* base58 エンコーダ */
+char    *
+base58( const char *src )
+{
+    Thread static char  encoded[BUFSIZ];
+    static char b[] =
+        "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
+      /* 0000000000111111111122222222223333333333444444444455555555 */
+      /* 0123456789012345678901234567890123456789012345678901234567 */
+    char        temp[BUFSIZ];
+    __int64     count = strlen(b);
+    __int64     num   = _atoi64( src );
+    __int64     div;
+    __int64     mod;
+
+    encoded[0] = NUL;
+
+    while ( num >= count ) {
+        div = num / count;
+        mod = num - (count * div);
+        temp[0] = b[mod];
+        temp[1] = NUL;
+        if ( encoded[0] )
+            strcat( temp, encoded );
+        strcpy( encoded, temp );
+        num = div;
+    }
+
+    if ( num > 0 ) {
+        temp[0] = b[num];
+        temp[1] = NUL;
+        if ( encoded[0] )
+            strcat( temp, encoded );
+        strcpy( encoded, temp );
+    }
+
+    return ( encoded );
 }
 
 
@@ -591,9 +637,15 @@ postPhotoOnFlickr(
                 if ( q ) {
                     strncpy( photoID, p, q - p );
                     photoID[q - p] = NUL;
+#ifdef  TRADITIONAL_FLICKR_STYLE
                     sprintf( url, "http://www.flickr.com/photos/%s/%s/",
                              flickrUserName[0] ? flickrUserName : flickrNSID,
                              photoID );
+#else
+                    sprintf( url, "http://flic.kr/p/%s",
+                             base58( photoID ) );
+                                    // Flickr2Twitter API 相当の短縮URL生成
+#endif
                 }
             }
         }

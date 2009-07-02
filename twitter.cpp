@@ -8,6 +8,13 @@
  *
  * $Log: /comm/chirrup/twitter.cpp $
  * 
+ * 3     09/07/03 3:20 tsupo
+ * 2.03版
+ * 
+ * 88    09/07/01 15:54 Tsujimura543
+ * 「OAuth 認証に失敗」エラーダイアログの表示後、5秒以内にユーザ入力
+ * がない場合は、ダイアログを自動的に閉じるようにした
+ * 
  * 2     09/06/18 1:33 tsupo
  * 2.01版
  * 
@@ -321,7 +328,7 @@ extern "C" {
 
 #ifndef	lint
 static char	*rcs_id =
-"$Header: /comm/chirrup/twitter.cpp 2     09/06/18 1:33 tsupo $";
+"$Header: /comm/chirrup/twitter.cpp 3     09/07/03 3:20 tsupo $";
 #endif
 
 #ifdef _DEBUG
@@ -2165,6 +2172,23 @@ CTwitter::MakeOAuthRequest(
 }
 
 
+extern "C" {
+#ifdef  _MSC_VER
+#pragma warning ( disable: 4100 )
+#endif
+void CALLBACK   MessageBoxTimer( HWND  hwnd, 
+                                 UINT  uiMsg, 
+                                 UINT  idEvent, 
+                                 DWORD dwTime )
+{
+    PostQuitMessage( 0 );
+}
+#ifdef  _MSC_VER
+#pragma warning ( default: 4100 )
+#endif
+}
+
+
 bool
 CTwitter::CheckOAuthResult( const char *response )
 {
@@ -2174,12 +2198,15 @@ CTwitter::CheckOAuthResult( const char *response )
     if ( (responseCode == 401) ||
          strstr( response, "Invalid OAuth Request" ) ||
          strstr( response, "Failed to validate oauth signature or token" ) ) {
+        unsigned long   id = SetTimer( NULL, 0, 5000,
+                                       (TIMERPROC)MessageBoxTimer );
         MessageBox( NULL,
                     "OAuth 認証に失敗しました。\r\n"
                     "このエラーが頻繁に出るようであれば、"
                     "アクセストークンを取得し直してください。  ",
                     "OAuth 認証エラー",
                     MB_OK|MB_ICONERROR );
+        KillTimer( NULL, id );
         ret = false;
     }
 

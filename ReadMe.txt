@@ -1,7 +1,7 @@
 Twitterクライアント Chirrup
   作者: tsupo (H.Tsujimura, mailto: tsupo@na.rim.or.jp)
-  パッケージ作成日: 2009年6月19日
-  パッケージ版数:   2.02
+  パッケージ作成日: 2009年7月1日
+  パッケージ版数:   2.03
 
   概要:
     Twitter (http://twitter.com/) の利用者向けのクライアントです。発言の投稿と、自分の friends の発言内容の
@@ -257,6 +257,7 @@ Twitterクライアント Chirrup
 
     Flickr API
        http://www.flickr.com/services/api/
+       http://code.flickr.com/blog/2009/06/30/twitter-in-the-api/
 
     はてなフォトライフ Atom API
        http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A4%CA%A5%D5%A5%A9%A5%C8%A5%E9%A5%A4%A5%D5AtomAPI?kid=88110
@@ -294,6 +295,13 @@ Twitterクライアント Chirrup
 
 
   更新情報:
+    Ver 2.03  2009年 7月 1日 (1) Flickr に投稿した画像の URL そのままではなく、
+                                 http://flic.kr/p/{base58-photo-id} 形式の短縮URL
+                                 に変換したものを「発言」欄に挿入するようにした
+                             (2) Twitter の「OAuth 認証エラー」ダイアログへのユー
+                                 ザ入力が一定時間経過後もない場合、自動的にダイ
+                                 アログを閉じるようにした (現在は 5秒経過後に閉
+                                 じる設定にしてある)
     Ver 2.02  2009年 6月19日 tumblr のアカウント情報未設定状態ではじめてアカウン
                              ト情報を設定した直後、あるいはアカウント情報を変更
                              した直後、いったん「設定」ダイアログを終了させるこ
@@ -1203,4 +1211,4 @@ Twitterクライアント Chirrup
                                  ないようにした(リターンキーの空打ちは無視するようにした)
     Ver 1.00  2007年 4月 5日 最初のバージョン (「観測気球」にて公開)
 
-$Header: /comm/chirrup/ReadMe.txt 5     09/06/20 17:23 tsupo $
+$Header: /comm/chirrup/ReadMe.txt 6     09/07/03 3:20 tsupo $
